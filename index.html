@@ -4,13 +4,30 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            Amount <input type="number"  id="principal">  <br/><br/>
+            Interest Rate <input type="range"  id="rate" min="minval" max="maxval" value=10.50 onclick=updateRate()> 
+            <span id="rate_val">
+                10.50%
+            </span><br/><br/>
+            No. of Years <select id="years">
+                <option value="1">1</option>
+                <!-- fill in the rest of the values-->
+            </select> <br/><br/>
 
-        <button onclick="compute()">Compute</button>
+            <button onclick="compute()">Compute Interest</button>
+            <br/>
+            <span id="result">
+
+            </span>
+        </div>
+        <footer>
+
+            &#169; This Calculator belongs to --your name--
+    
+    
+        </footer>
     </body>
 </html>
